@@ -12,7 +12,8 @@
     align-items: center;
     height: 49px;
     font-size: 16px;
-    width: 275.835px;
+    max-width: 275.835px;
+    width: 100%;
     padding: 7.302px 14.605px;
     align-items: center;
     border-radius: 14.605px;
@@ -30,4 +31,10 @@
     box-shadow: none;
     backdrop-filter:none;
     color: white
+}
+
+@media(max-width: 700px){
+    .bottom-container{
+        display: none;
+    }
 }
