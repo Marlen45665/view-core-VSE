@@ -1,4 +1,5 @@
 .search{
+    padding: 0 10px;
     position: relative;
     height: 100%;
     display: flex;
@@ -13,9 +14,21 @@
 .search-button:hover{
     cursor: pointer;
 }
+.search-button{
+    max-width: 751px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
 .bottom-block{
     position: absolute;
     bottom: 0;
     margin-bottom: 30px;
     color: brown;
+}
+
+@media(max-width: 768px){
+    .search{
+        padding: 0;
+    }
 }
