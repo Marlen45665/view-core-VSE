@@ -1,4 +1,5 @@
 .search{
+    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -6,8 +7,15 @@
     justify-content: center;
     font-size: 32px;
     font-family: "inter";
-    transition: .4s;
+    color: white;
+    transition: .6s
 }
 .search-button:hover{
     cursor: pointer;
+}
+.bottom-block{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+    color: brown;
 }
