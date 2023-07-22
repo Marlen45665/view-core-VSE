@@ -1,17 +1,14 @@
 import { useState} from "react";
-import "./Search.css"
+import "./Search.css";
+import SearchInput from "../SearchInput/SearchInput"
 import SearchContent from "../SearchContent/SearchContent";
 import { useInView } from 'react-intersection-observer';
 
 const Search = (props) => {
 
     const {ref, inView} = useInView({
-        threshold: 0.8,
+        threshold: 0.7,
     });
-    console.log(inView)
-
-
-
 
     const [state, setState] = useState(true)
 
@@ -21,20 +18,22 @@ const Search = (props) => {
 
     const stylesSer = {
         position: "fixed",
-        transition: 'opacity 0.3s',
+        transition: 'opacity 0.4s ease',
         opacity: inView ? 1 : 0,
     }
 
-    const openView = () => {  
-
-        setState(state => !state)
+    const handleState = (states) => {
+        setState(states)
         props.newState(state)
+        console.log(states)
     }
 
     return (
         <>
             <div ref={ref} className="search" style={state ? null : styles}>
-                <div style={state ? null : stylesSer} onClick={openView} className={`search-button`}>сменить контент</div>
+                <div style={state ? null : stylesSer} className={`search-button`}>
+                    <SearchInput changeState={handleState}/>
+                </div>
                 <div className="bottom-block">ggg</div>
             </div>
             {state ? null : <SearchContent/>}

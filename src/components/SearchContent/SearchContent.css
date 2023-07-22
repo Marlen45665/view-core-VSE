@@ -10,9 +10,19 @@
     border-radius: 18px;
     width: 80%;
     height: 100%;
-    background-color: rgba(128, 128, 128, 0.569);
+    background: rgba(255, 255, 255, 0.10);
     display: flex;
     justify-content: center;
     font-size: 32px;
     font-family: "inter";
+    color: white;
+
+
+    border-radius: 32px;
+    box-shadow: 0px 17.52544403076172px 21.90680694580078px 0px rgba(0, 0, 0, 0.05), -0.7302268743515015px 0.7302268743515015px 0.7302268743515015px -1.460453748703003px rgba(255, 255, 255, 0.35) inset;
+    backdrop-filter: blur(71.5622329711914px);
+    border: 0.5px solid rgba(255, 255, 255, 0.213);
 }
+
+
+
