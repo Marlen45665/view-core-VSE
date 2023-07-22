@@ -3,6 +3,7 @@ import "./Search.css";
 import SearchInput from "../SearchInput/SearchInput"
 import SearchContent from "../SearchContent/SearchContent";
 import { useInView } from 'react-intersection-observer';
+import BottomBlock from "../../BottomBlock/BottomBlock";
 
 const Search = (props) => {
 
@@ -33,7 +34,9 @@ const Search = (props) => {
                 <div style={state ? null : stylesSer} className={`search-button`}>
                     <SearchInput changeState={handleState}/>
                 </div>
-                <div className="bottom-block">ggg</div>
+                <div className="bottom-block">
+                    <BottomBlock/>
+                </div>
             </div>
             {state ? null : <SearchContent/>}
         </>

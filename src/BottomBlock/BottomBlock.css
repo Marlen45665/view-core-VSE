@@ -1,0 +1,33 @@
+.bottom-container{
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    box-sizing:border-box;
+
+}
+.bottom-card{
+    display: flex;
+    align-items: center;
+    height: 49px;
+    font-size: 16px;
+    width: 275.835px;
+    padding: 7.302px 14.605px;
+    align-items: center;
+    border-radius: 14.605px;
+    background: rgba(255, 255, 255, 0.30);
+    box-sizing: border-box;
+    backdrop-filter: blur(6.5622329711914px);
+    transition: .4s;
+
+    background: white;
+    color: black;
+}
+.bottom-card:hover{
+    cursor: pointer;
+    background: #0157FF;
+    box-shadow: none;
+    backdrop-filter:none;
+    color: white
+}

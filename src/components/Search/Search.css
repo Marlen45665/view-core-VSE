@@ -22,9 +22,7 @@
 }
 .bottom-block{
     position: absolute;
-    bottom: 0;
-    margin-bottom: 30px;
-    color: brown;
+    bottom: 0px;
 }
 
 @media(max-width: 768px){
