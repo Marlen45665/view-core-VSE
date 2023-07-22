@@ -1,39 +1,40 @@
-import { useState, useRef, useEffect} from "react";
+import { useState} from "react";
 import "./Search.css"
 import SearchContent from "../SearchContent/SearchContent";
+import { useInView } from 'react-intersection-observer';
 
 const Search = (props) => {
 
+    const {ref, inView} = useInView({
+        threshold: 0.8,
+    });
+    console.log(inView)
+
+
+
+
     const [state, setState] = useState(true)
-    const ref = useRef(null)
 
     const styles = {
         height: "70%",
     }
 
     const stylesSer = {
-        position: "fixed"
+        position: "fixed",
+        transition: 'opacity 0.3s',
+        opacity: inView ? 1 : 0,
     }
 
     const openView = () => {  
-        // ref.current.scrollTop = 0
-        // ref.current.style.scrollBehavior = 'smooth';
+
         setState(state => !state)
         props.newState(state)
     }
 
-    useEffect(() => {
-        if (ref.current){
-            // ref.current.scrollTop = 0
-            // ref.current.style.scrollBehavior = 'smooth';
-        }
-    })
-
-
     return (
         <>
             <div ref={ref} className="search" style={state ? null : styles}>
-                <div style={state ? null : stylesSer} onClick={openView} className="search-button">сменить контент</div>
+                <div style={state ? null : stylesSer} onClick={openView} className={`search-button`}>сменить контент</div>
                 <div className="bottom-block">ggg</div>
             </div>
             {state ? null : <SearchContent/>}
