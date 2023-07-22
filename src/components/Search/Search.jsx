@@ -25,7 +25,6 @@ const Search = (props) => {
     const handleState = (states) => {
         setState(states)
         props.newState(state)
-        console.log(states)
     }
 
     return (

@@ -27,10 +27,10 @@ function App() {
 
   return (
     <>
-    <div ref={ref} className="background" style={statea ? scrollStyle : null}>
-      <Search newState={handleState}/>
-    </div>
-    {statea ? null : <ContentApp/>}
+      <div ref={ref} className="background" style={statea ? scrollStyle : null}>
+        <Search newState={handleState}/>
+      </div>
+      {statea ? null : <ContentApp/>}
     </>
   );
 }
