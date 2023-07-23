@@ -20,6 +20,12 @@ const SearchInput = (props) => {
         }
     }
 
+    const submit = () => {
+        props.changeState(false);
+        setStateIcon(false)
+        console.log("нажата кнопка отправить")
+    }
+
     const handleClear = () => {
         handleState()
         setInputState("")
@@ -31,7 +37,8 @@ const SearchInput = (props) => {
 
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
-            handleState()
+            submit()
+            console.log("entr")
         }
     }
 
@@ -40,7 +47,7 @@ const SearchInput = (props) => {
             <div className="input-wrapper">
                 {stateIcon ? <SearchSharpIcon style={{fontSize: "25px", marginRight: "5px"}} onClick={handleState} /> : <ClearIcon style={{fontSize: "25px", marginRight: "5px"}} onClick={handleClear}/> }
                 <input className="input" placeholder="search" value={inputState} onChange={handleInputChange} onKeyDown={handleKeyPress} ref={inputRef}></input>
-                {inputState ? <ArrowUpwardIcon style={{fontSize: "25px", marginRight: "5px"}} onClick={handleState} /> : null}
+                {inputState ? <ArrowUpwardIcon style={{fontSize: "25px", marginRight: "5px"}} onClick={submit} /> : null}
             </div>
         </div>
     )

@@ -9,7 +9,7 @@ const Search = (props) => {
 
     const {ref, inView} = useInView({
         threshold: 0.7,
-    });
+    })
 
     const [state, setState] = useState(true)
 
