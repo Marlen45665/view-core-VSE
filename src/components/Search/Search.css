@@ -9,7 +9,7 @@
     font-size: 32px;
     font-family: "inter";
     color: white;
-    transition: .6s
+    transition: .6s ease; 
 }
 .search-button:hover{
     cursor: pointer;
