@@ -37,3 +37,6 @@
     outline: none;
     align-items:flex-end
 }
+.icon:hover{
+    cursor: pointer;
+}

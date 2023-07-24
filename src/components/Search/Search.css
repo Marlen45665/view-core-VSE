@@ -11,9 +11,6 @@
     color: white;
     transition: .6s ease; 
 }
-.search-button:hover{
-    cursor: pointer;
-}
 .search-button{
     max-width: 751px;
     width: 100%;

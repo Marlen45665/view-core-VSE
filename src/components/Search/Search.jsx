@@ -25,7 +25,7 @@ const Search = (props) => {
 
     const handleState = (states) => {
         setState(states)
-        props.newState(state)
+        props.newState(!states)
     }
 
     return (
@@ -38,7 +38,7 @@ const Search = (props) => {
                     <BottomBlock/>
                 </div>
             </div>
-            {state ? null : <SearchContent/>}
+            {state ? null : <SearchContent />}
         </>
     )
 }

@@ -24,7 +24,16 @@
     backdrop-filter: blur(71.5622329711914px);
     border: 0.5px solid rgba(255, 255, 255, 0.213);
 }
-
+.wrap{
+    margin-top: 100px;
+    width: 100%;
+    padding: 20px;
+    box-sizing:border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+}
 
 @media(max-width: 768px){
     .search-content-erapper{
